@@ -16,12 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DiscoveryController {
 
-		@Autowired
+	@Autowired
 	private DiscoveryService discoveryService;
 
 	@GetMapping("/discovery")
-	public ResponseEntity<List<ServiceInstance>> service(@RequestParam(value = "name", defaultValue = "poc-service") String name) {
-		return ResponseEntity.ok(discoveryService.servicesByName(name)); 
+	public ResponseEntity<List<ServiceInstance>> service(
+			@RequestParam(value = "name", defaultValue = "poc-service") String name) {
+		return ResponseEntity.ok(discoveryService.servicesByName(name));
 	}
 
 }

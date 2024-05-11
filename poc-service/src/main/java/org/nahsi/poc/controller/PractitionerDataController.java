@@ -27,7 +27,7 @@ public class PractitionerDataController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<String> getHpData(@PathVariable("id") String id) {
- 	Practitioner practitioner = service.get(id);
+		Practitioner practitioner = service.get(id);
 		String serialized = FhirContext.forR4().newJsonParser().encodeResourceToString(practitioner);
 		return ResponseEntity.ok(serialized);
 	}

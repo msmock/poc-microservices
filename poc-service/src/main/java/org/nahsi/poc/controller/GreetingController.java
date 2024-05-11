@@ -21,5 +21,5 @@ public class GreetingController {
 	public ResponseEntity<Greeting> greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return ResponseEntity.ok(new Greeting(counter.incrementAndGet(), String.format(template, name)));
 	}
-	
+
 }
