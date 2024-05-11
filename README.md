@@ -15,10 +15,11 @@ To tell the Config Server to use your local Git repository use `native` Spring p
 `-Dspring.profiles.active=native -DGIT_REPO=/projects/spring-microservices-config`
 
 ## poc-service
-Simple service with 3 endpoints.
 
 The service loads it's configuration from the configuration server configured in application.properties. 
 When started it provides the following endpoints: 
+
+The poc service endpoints are:
 
 ### greetings: 
 Simple hello service returning a greeting for testing at: http://localhost:8080/greeting?name=Username
@@ -29,11 +30,14 @@ Serves RESTful FHIR interface for simple busines objects e.g. licence informatio
 ### patient:
 Serves RESTful FHIR interface for simple busines objects e.g. licence information at: http://localhost:8080/patient/Id-3
 
+### retrieve:
+Calls external REST interfaces for data, e.g., from https://randomuser.me at http://localhost:8080/retrieve. 
+
 
 # TODO
-- use parent pom in poc-service pom
-- Add service to perform a HTTP requests to external source (e.g., FHIR Server) 
-- Test connection with mongo db. Use compass client for mongo management.
-- Use redis cache for interprocess state
 - Add traceparent header in api-gateway
+- use parent pom in poc-service pom
+- Test connection with mongo db.
+- Use redis cache for interprocess state
+
 

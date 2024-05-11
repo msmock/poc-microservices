@@ -40,22 +40,26 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- use config server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 
+		<!-- service discovery -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
+		<!-- generate boilerplate code -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- required to work with FHIR -->
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-structures-r4</artifactId>
@@ -68,11 +72,13 @@
 			<version>5.2.0</version>
 		</dependency>
 
-		<!-- required for WebClient only -->
+		<!-- required to parse strings to JSON -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webflux</artifactId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<version>3.2.5</version>
 		</dependency>
+
 
 	</dependencies>
 
