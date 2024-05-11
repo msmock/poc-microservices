@@ -7,7 +7,7 @@ The microservice can be started locally from the IDE. Please note that the Confi
 You can access the following services at given location:
 * Discovery Server - http://localhost:8761
 * Config Server - http://localhost:8888
-* Services - random port, check Eureka Dashboard
+* Services - random port, check Eureka discovery dashboard
 * AngularJS frontend (API Gateway) - http://localhost:8080 
 
 To tell the Config Server to use your local Git repository use `native` Spring profile and set the 
