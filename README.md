@@ -35,4 +35,5 @@ Serves RESTful FHIR interface for simple busines objects e.g. licence informatio
 - Add service to perform a HTTP requests to external source (e.g., FHIR Server) 
 - Test connection with mongo db. Use compass client for mongo management.
 - Use redis cache for interprocess state
+- Add traceparent header in api-gateway
 
