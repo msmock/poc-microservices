@@ -2,7 +2,7 @@
 
 ## Starting services
 
-The microservice can be started locally from the IDE. Please note that the Config and Discovery Server must be started before any other application.
+The microservices can be started locally from the IDE. Please note that the Config and Discovery Server must be started before any other application.
 
 You can access the following services at given location:
 * Discovery Server - http://localhost:8761
