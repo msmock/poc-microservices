@@ -34,10 +34,4 @@ Serves RESTful FHIR interface for simple busines objects e.g. licence informatio
 Calls external REST interfaces for data, e.g., from https://randomuser.me at http://localhost:8080/retrieve. 
 
 
-# TODO
-- Add traceparent header in api-gateway
-- use parent pom in poc-service pom
-- Test connection with mongo db.
-- Use redis cache for interprocess state
-
 
