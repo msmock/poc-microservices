@@ -16,7 +16,6 @@ public class RetrievalController {
 
     try {
 
-      // TBD: do json call via gateway
       RestClient restClient = RestClient.create();
       String responseAsString = restClient.get()
           .uri("https://randomuser.me/api/?nat=ch")
