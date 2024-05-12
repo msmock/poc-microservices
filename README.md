@@ -8,7 +8,7 @@ You can access the following services at given location:
 * Discovery Server - http://localhost:8761
 * Config Server - http://localhost:8888
 * Services - random port, check Eureka discovery dashboard
-* AngularJS frontend (API Gateway) - http://localhost:8080 
+* Admin Server - http://localhost:9090/
 
 To tell the Config Server to use your local Git repository use `native` Spring profile and set the 
 `GIT_REPO` environment variable, for example:
