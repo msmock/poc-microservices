@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.springframework.samples.petclinic.admin</groupId>
-    <artifactId>spring-petclinic-admin-server</artifactId>
-    <packaging>jar</packaging>
-    <description>Spring Boot Admin server</description>
+	<groupId>org.nahsi.poc.config</groupId>
+	<artifactId>poc-config-server</artifactId>
+	<packaging>jar</packaging>
+	<description>POC Config Server</description>
 
     <parent>
         <groupId>org.nahsi.poc</groupId>
