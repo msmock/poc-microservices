@@ -12,13 +12,11 @@
     <parent>
         <groupId>org.nahsi.poc</groupId>
         <artifactId>nahsi-spring-microservices</artifactId>
-        <version>3.2.4</version>
+        <version>0.5.0</version>
     </parent>
 
     <properties>
-        <spring-boot-admin.version>3.2.0</spring-boot-admin.version>
-        <docker.image.exposed.port>9090</docker.image.exposed.port>
-        <docker.image.dockerfile.dir>${basedir}/../docker</docker.image.dockerfile.dir>
+        <spring-boot-admin.version>3.2.3</spring-boot-admin.version>
     </properties>
 
     <dependencies>
@@ -55,19 +53,5 @@
         </dependency>
 
     </dependencies>
-
-    <profiles>
-        <profile>
-            <id>buildDocker</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>exec-maven-plugin</artifactId>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
 </project>

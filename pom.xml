@@ -6,12 +6,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.4</version>
+        <version>3.2.5</version>
     </parent>
 
     <groupId>org.nahsi.poc</groupId>
     <artifactId>nahsi-spring-microservices</artifactId>
-    <version>3.2.4</version>
+    <version>0.5.0</version>
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
 
