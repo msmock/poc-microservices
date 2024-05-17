@@ -1,4 +1,4 @@
-package org.nahsi.poc.service;
+package org.nahsi.service.poc.service;
 
 import org.hl7.fhir.r4.model.Patient;
 import org.springframework.stereotype.Service;

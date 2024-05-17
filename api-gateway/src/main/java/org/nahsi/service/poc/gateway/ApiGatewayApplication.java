@@ -1,4 +1,4 @@
-package org.nahsi.service.poc.api;
+package org.nahsi.service.poc.gateway;
 
 import java.time.Duration;
 

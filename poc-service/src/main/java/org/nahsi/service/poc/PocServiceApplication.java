@@ -1,4 +1,4 @@
-package org.nahsi.poc;
+package org.nahsi.service.poc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

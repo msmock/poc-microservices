@@ -1,4 +1,4 @@
-package org.nahsi.poc.controller;
+package org.nahsi.service.poc.controller;
 
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,8 @@
-package org.nahsi.poc.controller;
+package org.nahsi.service.poc.controller;
 
 import java.util.List;
 
-import org.nahsi.poc.service.DiscoveryService;
+import org.nahsi.service.poc.service.DiscoveryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,8 @@
-package org.nahsi.poc.controller;
+package org.nahsi.service.poc.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import org.nahsi.poc.model.Greeting;
+import org.nahsi.service.poc.model.Greeting;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

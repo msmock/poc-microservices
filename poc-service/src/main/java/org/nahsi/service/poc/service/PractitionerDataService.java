@@ -1,4 +1,4 @@
-package org.nahsi.poc.service;
+package org.nahsi.service.poc.service;
 
 import java.util.UUID;
 

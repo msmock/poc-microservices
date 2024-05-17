@@ -1,7 +1,7 @@
-package org.nahsi.poc.controller;
+package org.nahsi.service.poc.controller;
 
 import org.hl7.fhir.r4.model.Patient;
-import org.nahsi.poc.service.PatientDataService;
+import org.nahsi.service.poc.service.PatientDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
