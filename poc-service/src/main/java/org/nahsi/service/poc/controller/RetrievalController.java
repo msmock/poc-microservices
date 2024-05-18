@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClient;
 
+/** 
+* calls an external RESTful service. 
+*/
 @RestController
 @RequestMapping(value = "/retrieve")
 public class RetrievalController {

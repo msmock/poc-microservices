@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import ca.uhn.fhir.context.FhirContext;
 
 /**
+	* Serves patient data in FHIR format.
+	* 
  * @author Martin Smock
  */
 @RestController

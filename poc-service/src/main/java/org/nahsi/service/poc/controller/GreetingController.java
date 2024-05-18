@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+	* Just responds a greeting to know the service is up.
+	* 
  * @author Martin Smock
  */
 @RestController

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+	* Requests the services registered in the discovery service by service name. 
+	* 
  * @author Martin Smock
  */
 @RestController
