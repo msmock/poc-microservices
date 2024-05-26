@@ -36,9 +36,11 @@ public class PractitionerDataService {
 		IParser parser = ctx.newJsonParser();
 		parser.setPrettyPrint(true);
 		String serialized = parser.encodeResourceToString(data);
+
+		System.out.println("Accepted patient object:");
 		System.out.println(serialized);
 		
-		return "Accepted hp data object: " + serialized;
+		return serialized;
 	}
 
 	public String update(Practitioner data) {
@@ -47,9 +49,11 @@ public class PractitionerDataService {
 		IParser parser = ctx.newJsonParser();
 		parser.setPrettyPrint(true);
 		String serialized = parser.encodeResourceToString(data);
+
+		System.out.println("Updated patient object:");
 		System.out.println(serialized);
 		
-		return "Updated practitioner data object: " + serialized;
+		return serialized;
 	}
 
 	public String delete(String id) {
