@@ -1,7 +1,16 @@
 spring:
   profiles:
-    active: dev 
+    active: dev
+  main:
+    banner-mode: off
   application:
     name: poc-service
   config:
     import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888/}
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO

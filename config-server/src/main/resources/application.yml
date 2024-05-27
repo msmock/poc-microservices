@@ -1,7 +1,9 @@
 server.port: 8888
 spring:
   profiles:
-    active: dev 
+    active: dev
+  main:
+    banner-mode: off
   application:
     name: config-server
   cloud:
@@ -22,5 +24,12 @@ management:
       exposure:
         include: "*"
         exclude: "env,beans"
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
 
 

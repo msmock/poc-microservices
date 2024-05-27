@@ -1,6 +1,8 @@
 spring:
   profiles:
-    active: dev 
+    active: dev
+  main:
+    banner-mode: off
   application:
     name: discovery-server
   config:
@@ -9,8 +11,7 @@ spring:
 # Avoid some debugging logs at startup
 logging:
   level:
-    org:
-      springframework:
-        boot: INFO
-        web: INFO
-
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
