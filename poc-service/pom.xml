@@ -83,6 +83,12 @@
 			<version>3.2.5</version>
 		</dependency>
 
+		<!-- JMX Support -->
+		<dependency>
+			<groupId>org.jolokia</groupId>
+			<artifactId>jolokia-core</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
