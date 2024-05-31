@@ -4,7 +4,7 @@ spring:
   main:
     banner-mode: off
   application:
-    name: api-gateway
+    name: poc-gateway
   config:
     import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888/}
 

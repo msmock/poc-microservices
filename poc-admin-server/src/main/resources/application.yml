@@ -4,11 +4,10 @@ spring:
   main:
     banner-mode: off
   application:
-    name: discovery-server
+    name: poc-admin-server
   config:
     import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888/}
 
-# Avoid some debugging logs at startup
 logging:
   level:
     root: INFO

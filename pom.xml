@@ -17,10 +17,10 @@
 
     <modules>
         <module>poc-service</module>
-        <module>config-server</module>
-        <module>discovery-server</module>
-        <module>api-gateway</module>
-        <module>admin-server</module>
+        <module>poc-config-server</module>
+        <module>poc-discovery-server</module>
+        <module>poc-gateway</module>
+        <module>poc-admin-server</module>
     </modules>
 
     <properties>

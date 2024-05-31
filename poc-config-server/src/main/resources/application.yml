@@ -5,7 +5,7 @@ spring:
   main:
     banner-mode: off
   application:
-    name: config-server
+    name: poc-config-server
   cloud:
     config:
       server:
