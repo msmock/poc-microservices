@@ -63,8 +63,7 @@ public class PersistenceDataService {
 
         // check if the patient object with fhir id already exists
         String id = getUnqualifiedId(patient);
-        Document doc = collection.find(eq("id", id)).first();
-        if (doc != null)
+        if (collection.find(eq("id", id)).first() != null)
             return "Patient with id = " + id + " already exists.";
 
         // else
@@ -72,7 +71,7 @@ public class PersistenceDataService {
         IParser parser = ctx.newJsonParser();
         String serialized = parser.encodeResourceToString(patient);
 
-        doc = Document.parse(serialized);
+        Document doc = Document.parse(serialized);
         InsertOneResult result = collection.insertOne(doc);
 
         logger.info("Accepted patient object: {}", result.getInsertedId());

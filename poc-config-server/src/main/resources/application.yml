@@ -16,15 +16,6 @@ spring:
         native:
           searchLocations: file:///${GIT_REPO}
 
-
-# should include: "*" in non production only
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-        exclude: "env,beans"
-
 logging:
   level:
     root: INFO
