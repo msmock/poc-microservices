@@ -11,8 +11,8 @@ import org.springframework.web.client.RestClient;
 * calls an external RESTful service. 
 */
 @RestController
-@RequestMapping(value = "/retrieve")
-public class RetrievalController {
+@RequestMapping(value = "/randomuser")
+public class RandomUserController {
 
   @GetMapping
   public ResponseEntity<String> retrieveData() {

@@ -1,3 +1,4 @@
+# For unknown reasons, the port must be set, although it will be replaced by the discovery server
 server:
   port: 9999
 spring:
