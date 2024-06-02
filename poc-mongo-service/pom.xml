@@ -66,13 +66,13 @@
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-structures-r4</artifactId>
-			<version>5.2.0</version>
+			<version>7.2.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-base</artifactId>
-			<version>5.2.0</version>
+			<version>7.2.0</version>
 		</dependency>
 
 		<!-- JMX Support -->
