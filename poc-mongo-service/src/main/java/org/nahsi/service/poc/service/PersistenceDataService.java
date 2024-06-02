@@ -3,6 +3,7 @@ package org.nahsi.service.poc.service;
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
 import com.mongodb.client.model.ReplaceOptions;
+import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.InsertOneResult;
 import com.mongodb.client.result.UpdateResult;
 import org.bson.conversions.Bson;
@@ -93,7 +94,7 @@ public class PersistenceDataService {
         String serialized = parser.encodeResourceToString(patient);
         Document doc = Document.parse(serialized);
 
-        // object to be replaced
+        // filter for object to be replaced
         Bson query = eq("id", getUnqualifiedId(patient));
 
         // Instructs the driver to insert a new document if none match the query
@@ -109,8 +110,23 @@ public class PersistenceDataService {
         return "Updated " + result.getModifiedCount() + " objects, and inserted object with id " + result.getUpsertedId();
     }
 
+    /**
+     * Delete a object in DB by fhir id
+     *
+     * @param id the fhir id of the object to be deleted
+     * @return a report
+     */
     public String delete(String id) {
-        return "Not implemented yet.";
+
+        MongoCollection<Document> collection = getCollection();
+
+        // filter for object to be deleted
+        Bson query = eq("id", id);
+
+        DeleteResult result = collection.deleteOne(query);
+        logger.info("Deleted document count: {} ", result.getDeletedCount());
+
+        return "Deleted "+result.getDeletedCount()+" objects.";
     }
 
     /**

@@ -34,7 +34,7 @@ Calls external REST interfaces for data, e.g., from https://randomuser.me at htt
 
 
 ## poc-mongo-service
-The service provides a RESTful interface with CRUD operations for fhir R4 patient class obejects to be stored in a 
+The service provides a RESTful interface with CRUD operations for fhir R4 patient class objects to be stored in a 
 mongo nosql database. 
 
 The service loads it's configuration from the configuration server configured in application.yaml.
