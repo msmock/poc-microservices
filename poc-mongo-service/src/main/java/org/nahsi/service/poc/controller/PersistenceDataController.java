@@ -1,6 +1,5 @@
 package org.nahsi.service.poc.controller;
 
-import org.hl7.fhir.r4.model.Identifier;
 import org.hl7.fhir.r4.model.Patient;
 import org.nahsi.service.poc.service.PersistenceDataService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import ca.uhn.fhir.context.FhirContext;
 
-import java.util.List;
-
 /**
  * Manage data in FHIR format in mongo db.
  *
@@ -31,27 +28,26 @@ public class PersistenceDataController {
     private PersistenceDataService service;
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<String> getPatientData(@PathVariable("id") String id) {
-        Patient patient = service.get(id);
+    public ResponseEntity<String> getById(@PathVariable("id") String id) {
+        Patient patient = service.getById(id);
         String serialized = FhirContext.forR4().newJsonParser().encodeResourceToString(patient);
         return ResponseEntity.ok(serialized);
     }
 
     @PostMapping
-    public ResponseEntity<String> createPatientData(@RequestBody String request) {
+    public ResponseEntity<String> create(@RequestBody String request) {
         Patient patient = FhirContext.forR4().newJsonParser().parseResource(Patient.class, request);
-        String result = service.create(patient);
-        return ResponseEntity.ok(result);
+        return ResponseEntity.ok(service.create(patient));
     }
 
     @PutMapping
-    public ResponseEntity<String> updatePatientData(@RequestBody String request) {
-        Patient parsed = FhirContext.forR4().newJsonParser().parseResource(Patient.class, request);
-        return ResponseEntity.ok(service.update(parsed));
+    public ResponseEntity<String> update(@RequestBody String request) {
+        Patient patient = FhirContext.forR4().newJsonParser().parseResource(Patient.class, request);
+        return ResponseEntity.ok(service.update(patient));
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<String> deleteHpData(@PathVariable("id") String id) {
+    public ResponseEntity<String> delete(@PathVariable("id") String id) {
         return ResponseEntity.ok(service.delete(id));
     }
 }

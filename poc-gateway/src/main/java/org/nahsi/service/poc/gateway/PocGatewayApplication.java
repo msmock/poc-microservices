@@ -21,10 +21,10 @@ import io.github.resilience4j.timelimiter.TimeLimiterConfig;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ApiGatewayApplication {
+public class PocGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApiGatewayApplication.class, args);
+        SpringApplication.run(PocGatewayApplication.class, args);
     }
 
     @Bean
